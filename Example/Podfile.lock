@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - WDLogLib (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - WDLogLib (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  WDLogLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  WDLogLib: d22fa5860effcb915768f880b13344bee6fcce99
+
+PODFILE CHECKSUM: fd14ae109d1da4d5a755769c92da12663ff50489
+
+COCOAPODS: 1.11.3

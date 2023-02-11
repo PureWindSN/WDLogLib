@@ -7,6 +7,7 @@
 //
 
 #import "WDViewController.h"
+#import "WindLogManager.h"
 
 @interface WDViewController ()
 
@@ -18,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    WindLogD(@"debug log");
 }
 
 - (void)didReceiveMemoryWarning

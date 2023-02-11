@@ -1,0 +1,6 @@
+framework module WDLogLib {
+  umbrella header "WDLogLib-umbrella.h"
+
+  export *
+  module * { export * }
+}
