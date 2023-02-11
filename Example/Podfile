@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'WDLogLib_Example' do
+  pod 'WDLogLib', :path => '../'
+
+  target 'WDLogLib_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
