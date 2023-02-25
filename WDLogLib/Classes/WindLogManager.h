@@ -10,9 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 #define kWindLogInstance [WindLogManager sharedInstance]
-#define WindLogD(msg) [kWindLogInstance.firstLogger logMessage:msg Level:WindLogLevelDebug]
-#define WindLogE(msg) [kWindLogInstance.firstLogger logMessage:msg Level:WindLogLevelError]
-#define WindLogT(msg) [kWindLogInstance.firstLogger logMessage:msg Level:WindLogLevelTrace]
+//#define WindLogD(msg) [kWindLogInstance.firstLogger logMessage:msg Level:WindLogLevelDebug]
+//#define WindLogE(msg) [kWindLogInstance.firstLogger logMessage:msg Level:WindLogLevelError]
+//#define WindLogT(msg) [kWindLogInstance.firstLogger logMessage:msg Level:WindLogLevelTrace]
+
+#define WindLogD(format,...) [kWindLogInstance.firstLogger logMessage:[NSString stringWithFormat:format, ##__VA_ARGS__] Level:WindLogLevelDebug]
+#define WindLogE(format,...) [kWindLogInstance.firstLogger logMessage:[NSString stringWithFormat:format, ##__VA_ARGS__] Level:WindLogLevelError]
+#define WindLogT(format,...) [kWindLogInstance.firstLogger logMessage:[NSString stringWithFormat:format, ##__VA_ARGS__] Level:WindLogLevelTrace]
+
 
 @interface WindLogManager : NSObject
 
