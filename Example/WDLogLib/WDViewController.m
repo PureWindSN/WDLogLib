@@ -19,7 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"53w");
     WindLogD(@"debug log");
+    WindLogD(@"%@ %@",@"test",@"demo");
 }
 
 - (void)didReceiveMemoryWarning

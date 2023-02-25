@@ -11,7 +11,7 @@
 
 - (void)write:(NSString *)message {
     NSLog(@"Normal Logger %@",message);
-    NSString *formmaterLogLevel = [NSString stringWithFormat:@"[N]:%@\n",message];
+    NSString *formmaterLogLevel = [NSString stringWithFormat:@"[Normal Logger]:%@\n",message];
     NSFileHandle *fileHandler = [NSFileHandle fileHandleForUpdatingAtPath:self.filePath];
     [fileHandler seekToEndOfFile];
     [fileHandler writeData:[formmaterLogLevel dataUsingEncoding:NSUTF8StringEncoding]];

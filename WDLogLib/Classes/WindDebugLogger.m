@@ -13,7 +13,7 @@
     [super write:message];
     NSLog(@"[Debug Logger] %@\n",message);
     
-    NSString *formmaterLogLevel = [NSString stringWithFormat:@"[D]:%@\n",message];
+    NSString *formmaterLogLevel = [NSString stringWithFormat:@"[Debug Logger] :%@\n",message];
     NSFileHandle *fileHandler = [NSFileHandle fileHandleForUpdatingAtPath:self.filePath];
     [fileHandler seekToEndOfFile];
     [fileHandler writeData:[formmaterLogLevel dataUsingEncoding:NSUTF8StringEncoding]];
